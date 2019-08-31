@@ -1,0 +1,365 @@
+/*
+Author: Ciara Ugas-Moy :)
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap');
+
+*{
+	margin:0px;
+	padding:0px;
+	outline:none;
+}
+body { 
+	background-color:black;
+	} 
+
+/*stars*/	
+#stars{
+	position: fixed;
+	width: 200%;
+	height: 100%;
+	background: url(stars.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	opacity:1.0;
+	z-index:-8;
+	animation: anistars 200s linear infinite;
+	
+}
+@keyframes anistars { 
+	100% { background-position: 0px; } 
+	0% { background-position: -2046px; }
+} 
+/*blinking layer of stars*/
+#starblink {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background: url(backstars.png) repeat top center;
+  z-index:-7;
+  animation:anistarblink 150s linear infinite, aniglimmer 6s linear infinite;
+}
+#starblink2 {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background: url(backstars.png) repeat top center;
+  z-index:-7;
+  animation:anistarblink2 350s linear infinite, aniglimmer2 6s linear infinite;
+}
+@keyframes anistarblink2 { 
+	0% { background-position: 0px; } 
+	100% { background-position: -2000px; }
+}
+ @keyframes anistarblink { 
+	100% { background-position: 0px; } 
+	0% { background-position: -2000px; }
+} 
+
+@keyframes aniglimmer2{
+	0% { opacity: 0; } 
+	25%{ opacity: 0; } 
+	50%{ opacity: 0; } 
+	75%{ opacity: 1; } 
+	100%{ opacity: 0; }
+}
+@keyframes aniglimmer{
+	0% { opacity: 1; } 
+	25% { opacity: 0; } 
+	50%{ opacity: 1; } 
+	75%{ opacity: 0; } 
+	100%{ opacity: 1; }
+}
+/*moon*/
+#moon{ 
+  position: fixed;
+  right:-10%;
+  bottom:-50%;
+  z-index:-6;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(moon.png);
+  background-size: cover;
+ }
+
+/*day*/	
+#day{
+	position: fixed;
+	width: 200%;
+	height: 100%;
+	background: url(sky.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	opacity:1.0;
+	z-index:-5;
+	animation: anisky 200s linear infinite;
+	pointer-events: none;
+	
+}
+@keyframes anisky { 
+	100% { background-position: 0px; } 
+	0% { background-position: -2048px; }
+}
+/*sun*/
+#sun{ 
+  position: fixed;
+  right:-10%;
+  bottom:-50%;
+  z-index:-4;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow:
+    0 0 60px 30px rgba(255, 253, 245,1),
+    0 0 100px 60px rgba(255,255,255,0.8),
+    0 0 140px 90px rgba(255,255,255,0.3),
+    0 0 240px 190px rgba(255,255,255,0.1);
+ } 
+@keyframes anirisac{
+	0% { right: -20%; } 
+	100% { right: 40%; } 
+}
+@keyframes anirise{
+	0% { bottom: -50%; } 
+	100% {bottom:50%;}
+}
+@keyframes anisetac{
+	0% { right: 40%; } 
+	100% { right: 100%; } 
+}
+@keyframes aniset{
+	0% {bottom:50%;}
+	100% {bottom:-50%;}
+}
+
+/*rain*/
+#rain{
+	position:fixed;
+	height: 100vh;
+	width:100vw;
+	background: url(rain.png);
+	opacity:0.0;
+	animation: AniRain .1s linear infinite;
+	z-index:-3;
+	pointer-events: none;
+}
+@keyframes AniRain{
+	0%{
+		background-position: 0% 0%;
+	}
+	100%{
+		background-position: 20% 100%;
+	}
+}
+/*cloud*/
+#clouds { 
+	 position: fixed;
+	 top: 0; 
+	 left: 0; 
+	 width: 100%; 
+	 height: 100%; 
+	 background: url(cloud.png);
+	 background-size:cover;
+	 opacity:0;
+	 animation: anicloud 250s linear infinite;
+	 z-index:-2;
+	 pointer-events: none;
+ } 
+@keyframes anicloud { 
+	0% { background-position: 0px; } 
+	100% { background-position: -5440px; }
+}
+
+/*lightening*/
+#light{
+	display:none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	animation: light 6s linear infinite;
+	opacity: 0;
+	z-index:-1;
+	pointer-events: none;
+}
+@keyframes light{
+	0% { opacity: 1; } 
+	10%{ opacity: 0; } 
+	11%{ opacity: 0; } 
+	14%{ opacity: 1; } 
+	20%{ opacity: 0; } 
+	21%{ opacity: 0; } 
+	24%{ opacity: 1; } 
+	30% { opacity: 0; } 
+	100%{ opacity: 0; }
+}
+
+/*button*/
+.buttonm {
+  display:flex;
+  background-color: rgba(0,0,0,0.0);
+  border: 3px solid white;
+  border-radius:100%;
+  color: white;
+  text-align: center;
+  justify-content:center;
+  text-decoration: none;
+  font-size: 20px;
+  font-family:'Major Mono Display', monospace;
+  margin-top: 40px;
+  padding:20px;
+  box-shadow: 0px 3px 5px #b0d6ff;
+  cursor: pointer;
+}
+.buttonm:hover {
+  background-color: rgba(176, 214, 255,0.3);
+}
+/*menu*/
+.menu ul {
+  list-style-type: none;
+}
+.menu li {
+	margin:20px;
+}
+.menu a {
+	font-size:6vh;
+	color:white;
+	text-decoration:none;
+	text-shadow: 0px 3px 5px #b0d6ff;
+}
+.menu, .menubutton{
+	font-family: 'Major Mono Display', monospace;
+	display:flex;
+	justify-content:center;
+	text-align:center;
+	font-size:6vh;
+	color:white;
+}
+.menu{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+@keyframes smallup{
+	0%{max-height:150vh;opacity:1;}
+	100%{max-height:0vh;opacity:0;}
+}
+@keyframes bigup{
+	100%{max-height:150vh;opacity:1;}
+	0%{max-height:0vh;opacity:0;}
+}
+
+.container{
+	display:block;
+	color:white;
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:5%;
+	margin-bottom:10%;
+	font-family:courier;
+	font-size:20px;
+	text-align:center;
+}
+/*headertext*/
+.htext{
+	color:white;
+	font-family:courier;
+	justify-content:left;
+}
+.controls{
+	display:inline-block;
+	color:white;
+	margin-left:10%;
+	margin-bottom:10%;
+	padding:10px;
+	font-family:courier;
+	float:left;
+}
+.col2{/*top for phones, middle column*/
+	display:inline-block;
+	color:white;
+	margin-right:10%;
+	margin-left:10%;
+	padding:10px;
+	font-family:courier;
+}
+.button{
+  display:inline-block;
+  background-color: rgba(0,0,0,0.0);
+  border: 2px solid white;
+  border-radius:4px;
+  color: white;
+  text-align: center;
+  justify-content:center;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-shadow: 0px 3px 5px #b0d6ff;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgba(176, 214, 255,0.3);
+}
+input, select{
+  display:inline-block;
+  width:150px;
+  margin: 8px 0px;
+  border: 2px solid white;
+  border-radius: 4px;
+  color:white;
+  background-color: rgba(0,0,0,0.0);
+  box-shadow: 0px 3px 5px #b0d6ff;
+  -webkit-appearance: none;
+   padding: 12px 20px;
+}
+
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius:50%;
+  width: 15px;
+  height: 25px;
+  background: rgba(176, 214, 255,0.5);
+  cursor: pointer;
+}
+
+input[type=range]{
+	padding:10px 10px;
+}
+ input:focus{
+	  background-color: rgba(176, 214, 255,0.3);
+	  color:white;
+}
+
+
+.highlight{
+	background-color:rgba(176, 214, 255,0.3);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: rgba(18, 73, 112,0.7);
+}
+
+::selection {
+  color: white;
+  background: rgba(18, 73, 112,0.7);
+}
+
+
