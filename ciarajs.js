@@ -63,16 +63,16 @@ function stars() {
     blink2.style.display = "block";
   }	 
 }
-//cue the lightening
+//cue the lightning
 function light() {
   var x= document.getElementById("light");
   var y=document.getElementById("lightbutton");
-    if (y.innerHTML==="Lightening") {
+    if (y.innerHTML==="Lightning") {
     x.style.display = "block";
-	y.innerHTML="No Lightening";
+	y.innerHTML="No Lightning";
   } else {
     x.style.display = "none";
-	y.innerHTML="Lightening";
+	y.innerHTML="Lightning";
   }
 }
 //sunrise and sunset
