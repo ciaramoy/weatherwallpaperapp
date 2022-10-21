@@ -1,15 +1,11 @@
+window.onload=init;
 
-/*menu*/
-function menutoggle() {
-  var x = document.getElementById("mymenu");
-  if (x.style.animation === "1s linear 0s 1 normal forwards running smallup") {
-	x.style.animation="bigup 1s linear forwards";
-	console.log(x.style.animation+"menu opened");
-	}
-  else {
-	x.style.animation="1s linear 0s 1 normal forwards running smallup";
-	console.log(x.style.animation+"menu closed");
-  }
+function init(){
+    clouds();
+    rain();
+    daylight();
+    stars();
+    moon();
 }
 //sliders toggle
 function slidertoggle(){ 

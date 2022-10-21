@@ -1,35 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="icon" type="image/ico" href="img/favicon.ico">
-<link rel="stylesheet" href="ciara.css">
-<script src="ciarajs.js"></script>		
-<script src="weather.js"></script>	
+	<link rel="icon" type="image/ico" href="favicon.ico">
+	<link rel="stylesheet" href="ciara.css">
+	<script src="ciarajs.js"></script>
 
-<title>Home</title>
+	<title>Forecast</title>
 </head>
 
-<body> 
+
+<body>
+<div class="backgroundelements">
 <div id="day"></div>
+<div id="clouds"></div>
+<div id="rain"></div>
 <div id="darkness"></div>
 <div id="stars"></div>
 <div id="starblink"></div>
 <div id="starblink2"></div>
-
-<div class="menubutton"><div onclick="menutoggle()" class="buttonm"><b>Menu</b></div></div>
-
-<div class="menu" id="mymenu">
-	<ul>
-	<a href="index.html"><li>Home-Sweet-Home</li></a>°
-	<a href="forecast.html"><li>The Forecast</li></a>°
-	<a href="index.html"><li>Projects</li></a>°
-	<a href="contact.html"><li>Contact</li></a>°
-	</ul>
+<div id="light"></div>
+<div id="sun" onclick="pauseplay('sun')"></div>
+<div id="moon" onclick="pauseplay('moon')" ></div>
 </div>
 
+<!--weather controls-->
+<div class="controls">
+
+	<h1 class="htext">Control The Skies</h1>
+	<br>
+	Cloud Cover
+	<div>
+		<input id="cloudcontrol" type="number" min="0" max="10" step="1" placeholder="From 0-10" oninput="clouds()"  value="3">
+	</div>
+	Rain Check
+	<div>
+		<input id="raincontrol" type="number" min="0" max="10" step="1" placeholder="From 0-10" oninput="rain()" value="2">
+	</div>
+	Daylight
+	<div>
+		<input id="daylightcontrol" type="number" min="0" max="10" step="1" placeholder="From 0-10" oninput="daylight()" value="8">
+	</div>
+	Stars
+	<div>
+		<input id="starscontrol" type="number" min="0" max="10" step="1" placeholder="From 0-10" oninput="stars()" value="7">
+	</div>
+	<br>
+	<div>
+		<button id="lightbutton" class="button" onclick="light()">Lightning</button>
+
+		<button id="sunbutton" class="button" onclick="sun()">Sunrise</button>
+
+		<button id="moonbutton" class="button" onclick="moon()">Moon</button>
+	</div>
+	<br>
+	<u><div id="slidertoggle" onclick="slidertoggle()">But I prefer sliders</div></u>
+</div>
+<!--end of div controls-->
 
 </body>
 </html>
