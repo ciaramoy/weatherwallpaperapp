@@ -10,19 +10,21 @@ function init(){
 //sliders toggle
 function slidertoggle(){ 
 	var x=document.getElementById('slidertoggle');
-	if (x.innerHTML==="But I prefer sliders"){
+	if (x.alt=="numbers"){
 		document.getElementById('cloudcontrol').type = 'range';
 		document.getElementById('daylightcontrol').type = 'range';
 		document.getElementById('raincontrol').type = 'range';
 		document.getElementById('starscontrol').type = 'range';
-		x.innerHTML="Please, I have a penchant for precision...";
+    x.innerHTML="Number Controls";
+    x.alt="sliders";
 	}
 	else{
 		document.getElementById('cloudcontrol').type = 'number';
 		document.getElementById('daylightcontrol').type = 'number';
 		document.getElementById('raincontrol').type = 'number';
 		document.getElementById('starscontrol').type = 'number';
-		x.innerHTML="But I prefer sliders";
+		x.innerHTML="Slider Controls";
+    x.alt="numbers";
 	}
 }
 
